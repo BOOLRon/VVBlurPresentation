@@ -50,7 +50,7 @@
     self.modalPresentationStyle = UIModalPresentationCustom;
     
     _presenter = [[VVBlurPresenter alloc] init];
-    _blurStyle = UIBlurEffectStyleDark;
+    _blurStyle = VVBlurEffectStyleNone;
     _presenter.blurStyle = _blurStyle;
     
     self.transitioningDelegate = _presenter;

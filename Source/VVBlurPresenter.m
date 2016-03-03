@@ -34,7 +34,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _blurStyle = UIBlurEffectStyleDark;
+        _blurStyle = VVBlurEffectStyleNone;
     }
     return self;
 }
@@ -66,7 +66,7 @@
     return transition;
 }
 
-- (void)setBlurStyle:(UIBlurEffectStyle)blurStyle {
+- (void)setBlurStyle:(VVBlurEffectStyle)blurStyle {
     if (_blurStyle != blurStyle) {
         _blurStyle = blurStyle;
         self.animationController.blurStyle = blurStyle;

@@ -22,7 +22,8 @@
 //  THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "VVBlurPresetationDefines.h"
 
 @interface VVBlurViewController : UIViewController
-@property (nonatomic, assign) UIBlurEffectStyle blurStyle;
+@property (nonatomic, assign) VVBlurEffectStyle blurStyle;
 @end

@@ -49,7 +49,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     PresentedViewController *pvc = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"showLight"]) {
-        pvc.blurStyle = UIBlurEffectStyleLight;
+        
     } else if ([segue.identifier isEqualToString:@"showDark"]) {
         pvc.blurStyle = UIBlurEffectStyleDark;
     }

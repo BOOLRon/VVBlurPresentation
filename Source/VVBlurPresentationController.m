@@ -31,14 +31,20 @@
 
 @implementation VVBlurPresentationController
 
-- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController style:(UIBlurEffectStyle)style {
+- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController style:(VVBlurEffectStyle)style {
     self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
     if (self) {
-        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:style];
-        _dimmingView = [[UIVisualEffectView alloc] initWithEffect:effect];
+
         _blurStyle = style;
         _effectContainerView = [UIView new];
         _effectContainerView.alpha = 0.0;
+        
+        if (style != VVBlurEffectStyleNone) {
+            UIBlurEffect *effect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyle)style];
+            _dimmingView = [[UIVisualEffectView alloc] initWithEffect:effect];
+        }else {
+            _effectContainerView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        }
     }
     return self;
 }
@@ -95,14 +101,17 @@
     return UIModalPresentationCustom;
 }
 
-- (void)setBlurStyle:(UIBlurEffectStyle)blurStyle {
+- (void)setBlurStyle:(VVBlurEffectStyle)blurStyle {
     if (blurStyle != _blurStyle) {
         _blurStyle = blurStyle;
         
         UIView *previousDimmingView = _dimmingView;
         
-        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:blurStyle];
-        self.dimmingView = [[UIVisualEffectView alloc] initWithEffect:effect];
+        if (blurStyle != VVBlurEffectStyleNone) {
+            UIBlurEffect *effect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyle)blurStyle];
+            self.dimmingView = [[UIVisualEffectView alloc] initWithEffect:effect];
+        }
+        
         NSArray *subviews = [self.effectContainerView subviews];
         for (UIView *view in subviews) {
             if (view == previousDimmingView) {

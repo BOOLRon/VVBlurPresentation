@@ -22,6 +22,7 @@
 //  THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "VVBlurPresetationDefines.h"
 
 @class VVBlurPresentationController;
 
@@ -33,9 +34,9 @@
 
 @interface VVBlurPresentationController : UIPresentationController
 
-@property (nonatomic, assign) UIBlurEffectStyle blurStyle;
+@property (nonatomic, assign) VVBlurEffectStyle blurStyle;
 @property (nonatomic, weak) id<VVBlurPresentationControllerDelegate> vv_presentationDelegate;
 
-- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController style:(UIBlurEffectStyle)style;
+- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController style:(VVBlurEffectStyle)style;
 
 @end

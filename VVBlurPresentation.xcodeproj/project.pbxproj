@@ -55,6 +55,7 @@
 		4B1FF8291A5A20C800C798BD /* VVBlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVBlurViewController.m; sourceTree = "<group>"; };
 		4B1FF8321A5A23F800C798BD /* PresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentedViewController.h; sourceTree = "<group>"; };
 		4B1FF8331A5A23F800C798BD /* PresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentedViewController.m; sourceTree = "<group>"; };
+		E4B473571C881BA600E52675 /* VVBlurPresetationDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVBlurPresetationDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +141,7 @@
 				4B1FF8271A5A20C800C798BD /* VVBlurTransitioning.m */,
 				4B1FF8281A5A20C800C798BD /* VVBlurViewController.h */,
 				4B1FF8291A5A20C800C798BD /* VVBlurViewController.m */,
+				E4B473571C881BA600E52675 /* VVBlurPresetationDefines.h */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -444,6 +446,7 @@
 				4B1FF8091A5A204500C798BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B1FF80A1A5A204500C798BD /* Build configuration list for PBXNativeTarget "VVBlurPresentationTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +455,7 @@
 				4B1FF80C1A5A204500C798BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
